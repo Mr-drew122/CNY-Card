@@ -1,0 +1,515 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.center {
+    position: relative;
+    margin: 8% auto;
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-size: 120%;
+    background-repeat: repeat;
+    border-radius: 14px;
+    padding: 70px 10px 10px 10px;
+    text-align: center;
+    height: 470px;
+    width: 330px;
+    align-items: center;
+    align-content: center;
+    color: #333333;
+}
+
+.center2 {
+    position: relative;
+    margin: 8% auto;
+    background-image: url('bg2.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat;
+    border-radius: 14px;
+    padding: 40px 12px 20px 12px;
+    text-align: center;
+    height: 470px;
+    width: 330px;
+    align-items: center;
+    align-content: center;
+    color: #333333;
+}
+
+.center3 {
+    position: relative;
+    margin: 8% auto;
+    background-image: url('bg3.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat;
+    border-radius: 14px;
+    padding: 40px 12px 20px 12px;
+    text-align: center;
+    height: 470px;
+    width: 330px;
+    align-items: center;
+    align-content: center;
+    color: #333333;
+}
+
+.center2 span {
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    white-space: pre-line;
+}
+
+.gif {
+    width: 55%;
+    height: auto;
+    margin-top: -80px;
+}
+
+.gif2 {
+    margin-top: -20px;
+    width: 40%;
+    height: auto;
+}
+
+#imageDisplay {
+      width: 40%;
+      height: auto;
+      margin-top: -60px;
+}
+
+/* Question Text */
+#valentineQuestion {
+      font-weight: 1000;
+      color: #333333;
+      margin: 20px 0;
+      font-family: 'Quicksand', sans-serif;
+}
+
+/* Button Styling */
+.button4 {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      white-space: normal;
+      min-width: auto;
+      max-width: fit-content;
+      text-align: center;
+      margin: 5px;
+      color: #333333;
+      outline: none !important;
+      font-family: 'Quicksand', sans-serif;
+}
+
+#responseButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Yes Button */
+#yesButton {
+      background: #4CAF50;
+}
+#yesButton:hover {
+      background: green;
+}
+
+/* No Button */
+#noButton {
+      background: lightcoral;
+      margin-bottom: -80px;
+}
+#noButton:hover {
+      background: #D96C6C;
+}
+
+/* No Button Animation */
+.bounce2 {
+        animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+.input-name {
+    width: 80%;
+    padding: 8px;
+    border: 2px solid #c87941;
+    background: #f9f9f9;
+    color: #c87941;
+    border-radius: 8px;
+    outline: none !important;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-name::placeholder {
+    color: #c87941;
+}
+
+.button {
+    margin-top: 80px;
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #ead7c6;
+    color: #333333;
+    border-radius: 8px;
+    outline: none !important;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.button:hover {
+    background-color: #D6C3B2;
+    box-shadow: 0px 4px 10px rgba(234, 215, 198, 0.6);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.button2 {
+    margin-top: 80px;
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #A2ACB5;
+    color: #333333;
+    border-radius: 8px;
+    outline: none !important;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.button3 {
+    margin-top: 10px;
+    width: 80%;
+    padding: 8px;
+    border: none;
+    background: #A2ACB5;
+    color: #333333;
+    border-radius: 8px;
+    outline: none !important;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.button3:hover {
+    background-color: #8F98A1;
+    box-shadow: 0px 4px 10px rgba(234, 215, 198, 0.6);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #8F98A1;
+    box-shadow: 0px 4px 10px rgba(234, 215, 198, 0.6);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.back-button {
+    width: 10%;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 7px;
+    top: 10px;
+    text-align: left;
+}
+
+.page {
+    background: #6d326d;
+    font-family: 'Quicksand', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto auto;
+    overflow: auto;
+}
+
+.page .page-content {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page h1 {
+    font-weight: 700;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+
+.page .btn_nav {
+    background: #002a32;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding: 17px 30px;
+    width: 146px;
+}
+
+.page .btn_nav:focus,
+.page .btn_nav:active {
+    outline: none;
+}
+
+.page a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.page a:hover {
+    text-decoration: none;
+}
+
+.animate_content {
+    animation: animate 3s ease;
+}
+
+.fadeIn {
+    z-index: 10;
+}
+
+.home {
+    background: linear-gradient(to bottom, #8AA2BC, #FFE0B9);
+}
+
+.page2 {
+    background: linear-gradient(to bottom, #8AA2BC, #A2ACB5);
+}
+
+.page3 {
+    background: linear-gradient(to bottom, #95B6D7, #D1D7E3);
+}
+
+@media only screen and (max-width: 767px) {
+    .page-content h1 {
+        margin-top: 100px;
+    }
+}
+
+@-moz-keyframes animate {
+    10% {
+        transform: scale(1, 0.002);
+    }
+    35% {
+        transform: scale(0.2, 0.002);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.2, 0.002);
+        opacity: 0;
+    }
+    85% {
+        transform: scale(1, 0.002);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes animate {
+    10% {
+        transform: scale(1, 0.002);
+    }
+    35% {
+        transform: scale(0.2, 0.002);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.2, 0.002);
+        opacity: 0;
+    }
+    85% {
+        transform: scale(1, 0.002);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@-o-keyframes animate {
+    10% {
+        transform: scale(1, 0.002);
+    }
+    35% {
+        transform: scale(0.2, 0.002);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.2, 0.002);
+        opacity: 0;
+    }
+    85% {
+        transform: scale(1, 0.002);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes animate {
+    10% {
+        transform: scale(1, 0.002);
+    }
+    35% {
+        transform: scale(0.2, 0.002);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.2, 0.002);
+        opacity: 0;
+    }
+    85% {
+        transform: scale(1, 0.002);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 649px) {
+    .center {
+        position: relative;
+        margin: 25% auto;
+        background-image: url('bg.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 14px;
+        padding: 50px 10px 10px 10px;
+        text-align: center;
+        height: 470px;
+        width: 330px;
+        align-items: center;
+        align-content: center;
+        color: #333333;
+    }
+    
+    .center2 {
+        position: relative;
+        margin: 25% auto;
+        background-image: url('bg2.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 14px;
+        padding: 35px 10px 10px 10px;
+        text-align: center;
+        height: 470px;
+        width: 330px;
+        align-items: center;
+        align-content: center;
+        color: #333333;
+    }
+    
+    .center3 {
+        position: relative;
+        margin: 8% auto;
+        background-image: url('bg3.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 14px;
+        padding: 40px 12px 20px 12px;
+        text-align: center;
+        height: 470px;
+        width: 330px;
+        align-items: center;
+        align-content: center;
+        color: #333333;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 749px) {
+    .center {
+        position: relative;
+        margin: 15% auto;
+        background-image: url('bg.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 14px;
+        padding: 50px 10px 10px 10px;
+        text-align: center;
+        height: 470px;
+        width: 330px;
+        align-items: center;
+        align-content: center;
+        color: #333333;
+    }
+    
+    .center2 {
+        position: relative;
+        margin: 15% auto;
+        background-image: url('bg2.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 14px;
+        padding: 35px 10px 10px 10px;
+        text-align: center;
+        height: 470px;
+        width: 330px;
+        align-items: center;
+        align-content: center;
+        color: #333333;
+    }
+    
+    .center3 {
+        position: relative;
+        margin: 8% auto;
+        background-image: url('bg3.jpg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 14px;
+        padding: 40px 12px 20px 12px;
+        text-align: center;
+        height: 470px;
+        width: 330px;
+        align-items: center;
+        align-content: center;
+        color: #333333;
+    }
+}
