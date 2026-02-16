@@ -45,7 +45,7 @@ $('.bounce2').click(function() {
 /* 🧧 Chinese New Year typing message */
 var i = 0;
 var txt = "\nMay your days be bright, your wallet full 😆, " +
-          "and your heart always happy.\n\n" +
+          "and your heart always happy.\n" +
           "Let’s welcome this year with smiles, good food, and fireworks! 🎆🐉";
 
 var speed = 70;
