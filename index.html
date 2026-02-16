@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Chinese New Year 🧧</title>
+    <link rel="stylesheet" href="asset/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<audio id="music" src="asset/lagu.mp3" preload="auto"></audio>
+
+<!-- 🎊 FINAL PAGE -->
+<div class="page page3">
+    <div class="page-content">
+        <div id="page3">
+            <div class="box">
+                <div class="center3">
+                    <img id="imageDisplay" src="asset/image7.gif" />
+                    <p id="valentineQuestion">Will you celebrate this Chinese New Year with me? 🧧</p>
+
+                    <div id="responseButtons">
+                        <button id="yesButton" class="button4 bounce2">Yes</button>          
+                        <button id="noButton" class="button4">Maybe later</button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 🎇 PAGE 2 -->
+<div class="page page2">
+    <div class="page-content">
+        <div id="page2">
+            <div class="box">
+                <div class="center2">
+
+                    <div class="back-button">
+                        <a class="button2 back-to-home"><-</a>
+                    </div>
+
+                    <img class="gif2" src="asset/uwu.gif">
+                    <br>
+
+                    <span>
+                        Gong Xi Fa Cai! 🐉  
+                        Wishing you happiness, prosperity, and lots of blessings this year!
+                        <span id="dynamic-text"></span>
+                    </span>
+
+                    <br> 
+                    <button class="button3 go-to-page3">Open New Year Message 🎆</button>                                                           
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 🧧 HOME PAGE -->
+<div class="page home">
+    <div class="page-content">
+        <div id="home">
+            <div class="box">
+                <div class="center">
+
+                    <img class="gif" src="asset/bear.gif">
+                    <br>
+
+                    <p>
+                        Hiiiii! 🎊  
+                        Since it’s Chinese New Year, I made this little surprise for you.  
+                        Thank you for being part of my year — wishing you luck, happiness, and success always! 🧧🐉
+                    </p>
+
+                    <br>
+                    <button class="button go-to-page2">Continue 🎇</button>
+                    <br>                          
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="asset/script.js"></script>
+
+<script type="module">
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
+const imagePaths = [
+  "./asset/image7.gif",
+  "./asset/image1.gif",
+  "./asset/image2.gif",
+  "./asset/image3.gif",
+  "./asset/image4.gif",
+  "./asset/image6.gif",
+  "./asset/image2.gif",
+  "./asset/image5.gif",
+  "./asset/image2.gif",
+  "./asset/image8.gif",
+  "./asset/image9.gif"
+];
+
+function preloadImages(paths) {
+    paths.forEach((path) => {
+        const img = new Image();
+        img.src = path;
+    });
+}
+preloadImages(imagePaths);
+
+const yesButton = document.getElementById('yesButton');
+const noButton = document.getElementById('noButton');
+const imageDisplay = document.getElementById('imageDisplay');
+const valentineQuestion = document.getElementById('valentineQuestion');
+const responseButtons = document.getElementById('responseButtons');
+
+let noClickCount = 0;
+let buttonHeight = 48;
+let buttonWidth = 80;
+let fontSize = 20;
+
+noButton.addEventListener('click', function() {
+    if (noClickCount < imagePaths.length - 1) {
+        noClickCount++;
+        imageDisplay.src = imagePaths[noClickCount];
+
+        buttonHeight += 45;
+        buttonWidth += 45;
+        fontSize += 25;
+
+        yesButton.style.height = `${buttonHeight}px`;
+        yesButton.style.width = `${buttonWidth}px`;
+        yesButton.style.fontSize = `${fontSize}px`;
+
+        noButton.textContent = [
+            "Maybe later",
+            "Are you sure? 😆",
+            "But it's New Year!",
+            "Free luck included 🧧",
+            "There will be food 👀",
+            "And fireworks 🎆",
+            "Still no? 🥺",
+            "Last chance!",
+            "Say yes for prosperity!",
+            "Okay fine 😭",
+            "You’re missing good luck!"
+        ][noClickCount];
+    }
+});
+
+yesButton.addEventListener('click', () => {
+    imageDisplay.src = 'asset/image7.gif';
+    valentineQuestion.textContent =
+      "Yay! 🎊 Happy Chinese New Year! May this year bring you luck, wealth, and happiness 🧧🐉";
+    responseButtons.style.display = 'none';
+    confetti();
+});
+</script>
+
+</body>
+</html>
